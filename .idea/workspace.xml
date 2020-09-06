@@ -20,16 +20,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33f0b635-cb0c-4af4-b631-66770eea69b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gcloudignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/app/model/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/app/store/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/app/store/store.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/app/store/store_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/app/store/testing.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/app/store/userrepository.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrate.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/20200904191615_create_users.down.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/20200904191615_create_users.up.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apiserver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/apiserver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/apiserver.toml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/apiserver.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/apiserver/apiserver.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/apiserver/apiserver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/apiserver/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/apiserver/config.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -51,11 +66,14 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration name="TestAPIServer_HandleHello in github.com/artloveyou/http-rest-api/internal/app/apiserver" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -69,15 +87,24 @@
       <pattern value="^\QTestAPIServer_HandleHello\E$" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Go Test.TestAPIServer_HandleHello in github.com/artloveyou/http-rest-api/internal/app/apiserver" />
-      </list>
-    </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="33f0b635-cb0c-4af4-b631-66770eea69b6" name="Default Changelist" comment="" />
+      <created>1599220220373</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599220220373</updated>
+      <workItem from="1599220221972" duration="161000" />
+    </task>
+    <servers />
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -89,11 +116,20 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
+    <state x="509" y="375" key="#SQL_Dialects" timestamp="1599236218270">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="509" y="375" key="#SQL_Dialects/0.0.1920.1040@0.0.1920.1040" timestamp="1599236218270" />
+    <state x="545" y="192" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599213796324">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="545" y="192" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599213796324" />
     <state width="1418" height="270" key="GridCell.Tab.0.bottom" timestamp="1599071429001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -110,5 +146,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1418" height="270" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599071429001" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1599220377424">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1599220377424" />
   </component>
 </project>

@@ -1,6 +1,7 @@
 package apiserver
 
 import (
+	"github.com/artloveyou/http-rest-api/internal/app/store"
 	"github.com/gorilla/mux"
 	"github.com/sirupsen/logrus"
 	"io"
@@ -19,6 +20,7 @@ type APIServer struct{
 	// эти поля добавляем сразу после установки пакетов
 	logger *logrus.Logger
 	router *mux.Router
+	store *store.Store
 }
 
 // New
@@ -44,6 +46,10 @@ func (s *APIServer) Start() error {
 
 	s.configureRouter() // ошибку не возвращает
 
+	if err := s.configureStore(); err != nil {
+		return err
+	}
+
 	s.logger.Info("Starting api server on port", s.config.BindAddr)
 
 	return http.ListenAndServe(s.config.BindAddr, s.router)
@@ -66,7 +72,18 @@ func (s *APIServer) configureRouter() {
 	s.router.HandleFunc("/hello", s.handleHello())
 }
 
-                    // Пример внутреннего теста этой функции в apiserver_internal_test.go
+func (s *APIServer) configureStore() error {
+	st := store.New(s.config.Store)
+	if err := st.Open(); err != nil {
+		return err
+	}
+
+	s.store = st
+
+    return nil
+}
+
+// Пример внутреннего теста этой функции в apiserver_internal_test.go
 func (s *APIServer) handleHello() http.HandlerFunc {
 
 	// интерфейс http.HandlerFunc позволяет тут обрабатывать
@@ -77,3 +94,4 @@ func (s *APIServer) handleHello() http.HandlerFunc {
 		io.WriteString(w, "Hello")
 	}
 }
+
