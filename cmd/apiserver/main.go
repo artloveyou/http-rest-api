@@ -9,7 +9,6 @@ import (
 )
 
 var (
-	// переменная для хранения флага
 	configPath string
 )
 
@@ -23,21 +22,15 @@ func init() {
 func main() {
 	fmt.Println("It's run")
 
-	// парсим флаги
 	flag.Parse()
 
 	config := apiserver.NewConfig()
-
-	                          // что декодим // куда записываем
 	_, err := toml.DecodeFile(configPath, config)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	// Создаем s сервер
-	s := apiserver.New(config)
-	// Пробуем запустить // Если ошибка
-	if err := s.Start(); err != nil {
-		log.Fatal(err) // пишем лог
+	if err := apiserver.Start(config); err != nil {
+		log.Fatal(err)
 	}
 }
